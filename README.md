@@ -1,5 +1,6 @@
 # arch-on-lenovo
 install arch without problem dualboot <br>
+replace /** */ with the name of your ssd/hd driver
 
 commands <br>
  lsblk <br>
@@ -11,5 +12,11 @@ commands <br>
  for the system use whatever you want type Linux filesystem <br>
  select write partitions and exit<br><br>
 lsblk to check the partitions<br>
-# format UFI
+# format partition UFI
+mkfs.vfat -F 32 /dev/** */
+# format partition swap
+mkswap /dev/** */
+# format partition for file system
+mkfs.ext4 /dev/** */
+
 
