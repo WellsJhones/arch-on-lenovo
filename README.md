@@ -18,7 +18,7 @@ mkfs.vfat -F 32 /dev/** */
 mkswap /dev/** */
 # format partition for file system
 mkfs.ext4 /dev/** */
-# creat a directory
+# create a directory
 mkdir /mnt/archinstall <br>
 # mount partition file system
 mount /dev/** */  /mnt/archintall
@@ -37,13 +37,19 @@ network configuration use NetworkManager <br>
 optional repositories multilib<br>
 and finaly install
 # copy filesto boot on windows
-mkdir /mnt/"name your windows"<br>
+create a folder <br>
+mkdir /mnt/"name your windows"<br><br>
 lsblk check the partition with 100mb <br>
-mount /dev/** */ <br>
-mount /dev/** */ /mnt/"your windows name"<br>
-cd /mnt/"your windows name" <br>
-cd EFI <br>
-cp -r /mnt/"your windows name"/EFI/Microsoft /boot/EFI <br>
+mount /dev/"partition above"/ /mnt/"your windows name"<br><br>
+enter the folder you create <br>
+cd /mnt/"your windows name" <br><br>
+enter EFI folder <br>
+cd EFI <br><br>
+ls  check if Microsoft folder is there. <br><br>
+copy the microsoft folder to your boot partition <br>
+cp -r /mnt/"your windows name"/EFI/Microsoft /boot/EFI <br><br>
+# reboot 
+
 
 
 
