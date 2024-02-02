@@ -5,7 +5,7 @@ replace /** */ with the name of your ssd/hd driver
 commands <br>
  lsblk <br>
  list the disk and partitions <br><br>
- now select the driver withour number only the storage name ex: /dev/sda
+ now select the driver withour number only the storage name ex: /dev/sda<br>
  cfdisk /dev/** */ <br><br>
 
  for EFI use 600mb type EFI System <br>
