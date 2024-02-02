@@ -5,29 +5,30 @@ replace /** */ with the name of your ssd/hd driver
 commands <br>
  lsblk <br>
  list the disk and partitions <br><br>
- cfdisk /dev/** */ <br>
- use this to modify the partitions use <br>
+ now select the driver withour number only the storage name ex: /dev/sda
+ cfdisk /dev/** */ <br><br>
+
  for EFI use 600mb type EFI System <br>
  for swap use 2gb type Linux swap <br>
  for the system use whatever you want type Linux filesystem <br>
  select write partitions and exit<br><br>
 lsblk to check the partitions<br>
 # format partition UFI
-mkfs.vfat -F 32 /dev/** */
+mkfs.vfat -F 32 /dev/** *123/
 # format partition swap
-mkswap /dev/** */
+mkswap /dev/** *123/
 # format partition for file system
-mkfs.ext4 /dev/** */
+mkfs.ext4 /dev/** *123/
 # create a directory
 mkdir /mnt/archinstall <br>
 # mount partition file system
-mount /dev/** */  /mnt/archintall
+mount /dev/** *123/  /mnt/archintall
 # creat a folder 
 mkdir /mnt/archinstall/boot
 # mont partition EFI/boot
-mount /dev/** */ /mnt/archinstall/boot
+mount /dev/** *123/ /mnt/archinstall/boot
 # config swap
-swapon /dev/** */
+swapon /dev/** *123/
 # call the script archinstall
 disk configuration select Pre-mounted configuration<br>
 bootloader select systemd-boot default <br>
